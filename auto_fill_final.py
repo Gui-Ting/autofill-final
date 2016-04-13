@@ -1,7 +1,6 @@
 
-# coding: utf-8
+# coding: utf-
 
-# In[4]:
 
 import re
 import sys
