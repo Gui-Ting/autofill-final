@@ -5,6 +5,7 @@
 
 
 import re
+import sys
 from robobrowser import RoboBrowser
 import design
 from PyQt4 import QtGui
@@ -35,7 +36,7 @@ class AutoFill(QtGui.QDialog, design.Ui_Dialog):
             list = []
             for l in browser.get_links(text = re.compile('.填寫.')): 
                 list.append(l)
-                list.pop(0)
+            list.pop(0)
             for li in list:
                 browser.follow_link(li)
                 form2 = browser.get_form(id = 'thisform')
